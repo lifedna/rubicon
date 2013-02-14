@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %meta{'http-equiv'=>'content-type',    :content=>'text/html;charset=UTF-8'}
+    %meta{'http-equiv'=>'X-UA-Compatible', :content=>'IE=9; IE=8; IE=7; IE=EDGE'}
+    %title Rubicon
+    = favicon_link_tag '/favicon.ico'
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = yield :extra_js
+    = csrf_meta_tags
+  %body
+    %div.container-fluid
+      %div.row-fluid
+        %div.span2
+          %div.thumbnail
+            = image_tag( "rails.png", :alt => "logo" )
+          %div#sidebar
+            %h3 Beta Features
+            %ul.nav.nav-tabs.nav-stacked
+              = site_nav_links('beta')
+            = yield :sidebar
+        %div.span10
+          %div.navbar
+            %div.navbar-inner
+              %div.container
+                = link_to "Rubicon", root_url, :class => 'brand'
+                %ul.nav
+                  = site_nav_links('active')
+          %div.btn-toolbar
+            %div.btn-group
+              %ul
+                = yield :nav_bar_sub
+
+          #content
+            = yield

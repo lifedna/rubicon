@@ -1,0 +1,54 @@
+/* baseline css starting point */
+/* line 2, ../../app/assets/stylesheets/baseline.css.scss */
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, form, blockquote {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 7, ../../app/assets/stylesheets/baseline.css.scss */
+h1, h2, h3, h4, h5, h6 {
+  padding-top: 5px;
+}
+
+/* line 11, ../../app/assets/stylesheets/baseline.css.scss */
+h1 {
+  font-size: 1.5em;
+}
+
+/* line 15, ../../app/assets/stylesheets/baseline.css.scss */
+h2 {
+  font-size: 1.25em;
+}
+
+/* line 19, ../../app/assets/stylesheets/baseline.css.scss */
+h3 {
+  font-size: 1.0em;
+}
+
+/* line 23, ../../app/assets/stylesheets/baseline.css.scss */
+h4 {
+  text-decoration: underline;
+  font-size: .9em;
+}
+
+/* line 28, ../../app/assets/stylesheets/baseline.css.scss */
+h5, h6, pre, code {
+  font-size: 1em;
+}
+
+/* line 32, ../../app/assets/stylesheets/baseline.css.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 36, ../../app/assets/stylesheets/baseline.css.scss */
+a img {
+  border: none;
+}
+
+/* line 40, ../../app/assets/stylesheets/baseline.css.scss */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

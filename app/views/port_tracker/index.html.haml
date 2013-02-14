@@ -1,0 +1,38 @@
+= content_for :sidebar do
+  %h3 Port Status
+  %h4 Legend
+  %table.table.table-bordered.table-striped.table-condensed
+    %tbody
+      %tr
+        %td.free Available
+      %tr
+        %td.nginx-vhost Nginx Virtual Host
+      %tr
+        %td.tomcat-SD Tomcat Shutdown
+      %tr
+        %td.tomcat Tomcat
+      %tr
+        %td.trinidad Trinidad
+      %tr
+        %td.unicorn-rails Unicorn Rails
+      %tr
+        %td.unicorn-rack Unicorn Rack
+
+- @machines.each do |mchn|
+  %div.span3
+    %h3= mchn.dns_name
+    %table.table.table-bordered.table-striped.table-condensed
+      - port_picker.each do |k,v|
+        - if v.blank?
+          %tr
+            %td.free= k.to_s
+            %td
+        - else
+          - v.each do |p|
+            %tr
+              - obj = p[0].to_s.constantize.find(p[1])
+              - css_class = obj.respond_to?(:server) ? obj.server : 'nginx'
+              %td{:class => css_class}= k.to_s
+              %td
+                = obj.name
+                %br

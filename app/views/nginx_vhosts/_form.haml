@@ -1,0 +1,14 @@
+= simple_form_for @nginx_vhost, :defaults => {:label_html => { :class =>"span3" }, :input_html => { :class =>"span4" }  } do |f|
+  = explain_errors( @nginx_vhost )
+  %div.container-fluid
+    %div.row-fluid
+      %div.span1
+
+      %div.span11
+        = f.input :name, :collection => @web_apps.map {|x| x.name }
+        = f.input :environment
+        = f.input :machine_desc, :label => "VM / Machine", :collection => @machines.map {|x| x.description}
+        = f.input :upstream_port, :required => false
+
+
+        = f.submit button_name, :class => "btn btn-large btn-primary"

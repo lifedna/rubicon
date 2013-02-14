@@ -1,0 +1,23 @@
+%table.table.table-bordered
+  %tbody
+    %tr
+      %td Web App Name
+      %td= @nginx_vhost.name
+    %tr
+      %td URL
+      %td= link_to @nginx_vhost.url, @nginx_vhost.url if @nginx_vhost.url.present?
+    %tr
+      %td git Repo Name
+      %td= @nginx_vhost.git_name
+    %tr
+      %td Machine
+      %td= @nginx_vhost.machine_desc
+    %tr
+      %td Rails Server
+      %td= @nginx_vhost.dns_name
+    %tr
+      %td Rails Server Port
+      %td= @nginx_vhost.upstream_port
+    %tr
+      %td Server Alias(es)
+      %td= @nginx_vhost.aka.blank? ? "-" : @nginx_vhost.aka

@@ -1,0 +1,9 @@
+= simple_form_for @machine, :defaults => {:label_html => { :class =>"span2" }, :input_html => { :class =>"span4" }  } do |f|
+  = explain_errors( @machine )
+
+  = f.input :dns_name
+  = f.input :description
+  = f.input :ip_address
+  = f.input :old_description, :as => :hidden, :input_html => { :value => @machine.description }
+
+  = f.submit button_name, :class => "btn btn-large btn-primary"

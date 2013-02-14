@@ -1,0 +1,23 @@
+%table.table.table-bordered
+  %tbody
+    %tr
+      %td Web App Name
+      %td= @web_app_instance.name
+    %tr
+      %td URL
+      %td= link_to @web_app_instance.url, @web_app_instance.url if @web_app_instance.url.present?
+    %tr
+      %td git Repo Name
+      %td= @web_app_instance.git_name
+    %tr
+      %td Machine
+      %td= @web_app_instance.machine_desc
+    %tr
+      %td Rails Server
+      %td= @web_app_instance.server
+    %tr
+      %td Rails Server Port
+      %td= @web_app_instance.downstream_port
+    %tr
+      %td Server Alias(es)
+      %td= @web_app_instance.aka.blank? ? "-" : @web_app_instance.aka

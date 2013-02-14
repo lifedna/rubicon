@@ -1,0 +1,38 @@
+$left-indent: 75px;
+
+#pageWrapper {
+  #content {
+    padding: 10px;
+    
+    form {
+      .field {
+        padding-bottom: 4px;
+        label {
+          display: inline-block;
+          width: $left-indent;
+        }
+        .alignTextTop {
+          vertical-align: top;
+        }
+      }
+      
+      .actions {
+        margin-top: 6px;
+        padding-left: 5px;
+        margin-left: $left-indent;
+      }
+      
+      .button {
+        padding: 2px 6px 2px 6px;
+      }
+    }
+    
+    table {
+      tr.shade { background-color: #ccc; }
+      td { padding: 2px 8px 2px 8px; }
+      
+    }
+    .field { margin-bottom: 10px; }
+  }
+}
+

@@ -1,0 +1,10 @@
+= simple_form_for @web_app, :defaults => {:label_html => { :class =>"span2" }, :input_html => { :class =>"span4" }  } do |f|
+  = explain_errors( @web_app )
+
+  = f.input :name
+  = f.input :url, :required => false
+  = f.input :git_name
+  = f.input :aka, :label => "Aliases", :as => 'text', :required => false
+  = f.input :old_name, :as => :hidden, :input_html => { :value => @web_app.name }
+
+  = f.submit button_name, :class => "btn btn-large btn-primary"

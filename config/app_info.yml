@@ -1,0 +1,29 @@
+application_name:      rubicon
+version_control:       git
+repo_loc:              git@gitlab.wicourts.gov:rubicon.git
+dns_root_url:          wicourts.gov
+default_branch:        master
+user:                  webteam
+default_rvm:           ruby-1.9.3-p327@rubicon
+use_sudo:              false
+git_enable_submodules: 1
+keep_releases:         5
+ssh_paranoid:          false
+opcenter:              "http://opcenter:8080/genericTabFrameset.html?tab=1&subject=gov.wicourts.admintopic.inhouse.inhouse.web&group=inhouse&groupLabel=Inhouse"
+
+# for rails 3.1 and up
+normalize_asset_timestamps: true
+
+env_info:
+  production:
+    deployable:  true
+    server:      devtools
+    server_type: unicorn
+    nginx_port:  80
+    use_socket:  true
+    use_bundler: true
+    skip_init:   false
+    bundle_without:
+      - :development
+      - :test
+      - :linux_test

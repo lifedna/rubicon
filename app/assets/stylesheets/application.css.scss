@@ -1,0 +1,46 @@
+/*
+ *= require_self
+ *= require jquery-ui/redmond
+*/
+
+/* http://colorschemedesigner.com/#3r61Tw0w0w0w0 */
+
+$main1-blue1: #0772A1;
+$main1-blue1-light-1: #3BA3D0;
+$main1-blue1-light-2: #63AFD0;
+$main1-blue1-dark-1: #225E79;
+$main1-blue1-dark-2: #024A68;
+
+$main2-blue2: #172CAF;
+$main2-blue2-dark-1: #3BA3D0;
+$main2-blue2-dark-2: #63AFD0;
+$main2-blue2-light-1: #2E3983;
+$main2-blue2-light-2: #707ED7;
+
+$main3-green: #00B74A;
+$main3-green-dark-1: #228A4C;
+$main3-green-dark-2: #007730;
+$main3-green-light-1: #37DB79;
+$main3-green-light-2: #63DB93;
+
+$main4-orange: #FF8700;
+$main4-orange-dark-1: #BF7C30;
+$main4-orange-dark-2: #A65800;
+$main4-orange-light-1: #FFA540;
+$main4-orange-light-2: #FFBD73;
+
+@import "baseline";
+@import "bootstrap";
+@import "bootstrap-responsive";
+@import "font-awesome";
+@import "aller_font_kit";
+@import "droid_serif_kit";
+@import "layout";
+
+.tomcat        { color: $main1-blue1-dark-1; }
+.tomcat-SD     { color: $main1-blue1-dark-2; }
+.trinidad      { color: $main1-blue1-light-1; }
+.unicorn-rack  { color: $main2-blue2-dark-1; }
+.unicorn-rails { color: $main2-blue2-dark-2; }
+.nginx         { color: $main4-orange-dark-1; }
+.free          { color: $main3-green-dark-1; }

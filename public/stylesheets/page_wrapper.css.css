@@ -1,0 +1,39 @@
+/* line 4, ../../app/assets/stylesheets/page_wrapper.css.scss */
+#pageWrapper #content {
+  padding: 10px;
+}
+/* line 8, ../../app/assets/stylesheets/page_wrapper.css.scss */
+#pageWrapper #content form .field {
+  padding-bottom: 4px;
+}
+/* line 10, ../../app/assets/stylesheets/page_wrapper.css.scss */
+#pageWrapper #content form .field label {
+  display: inline-block;
+  width: 75px;
+}
+/* line 14, ../../app/assets/stylesheets/page_wrapper.css.scss */
+#pageWrapper #content form .field .alignTextTop {
+  vertical-align: top;
+}
+/* line 19, ../../app/assets/stylesheets/page_wrapper.css.scss */
+#pageWrapper #content form .actions {
+  margin-top: 6px;
+  padding-left: 5px;
+  margin-left: 75px;
+}
+/* line 25, ../../app/assets/stylesheets/page_wrapper.css.scss */
+#pageWrapper #content form .button {
+  padding: 2px 6px 2px 6px;
+}
+/* line 31, ../../app/assets/stylesheets/page_wrapper.css.scss */
+#pageWrapper #content table tr.shade {
+  background-color: #ccc;
+}
+/* line 32, ../../app/assets/stylesheets/page_wrapper.css.scss */
+#pageWrapper #content table td {
+  padding: 2px 8px 2px 8px;
+}
+/* line 35, ../../app/assets/stylesheets/page_wrapper.css.scss */
+#pageWrapper #content .field {
+  margin-bottom: 10px;
+}

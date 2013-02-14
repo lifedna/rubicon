@@ -1,0 +1,67 @@
+#header {
+  width: 100%;
+  float: left;
+  margin-bottom: 10px;
+  
+  #headerIcon {
+    background:  asset_url("rails.png", "image");
+    float: left;
+    width: 50px;
+    height: 64px;
+    margin: 6px;
+  }
+  
+  #navigation {
+    float: left;
+    padding-top: 8px;
+    
+    #navBar {
+      float: left;
+      margin-bottom: 4px;
+      ul {
+        float: left;
+        width: 100%;
+        margin-top: 4px;
+        li {
+          float: left;
+          a {
+            display: block;
+            width: 12em;
+            margin: 0;
+            padding: 2px 5px 5px 5px;
+            text-align: center;
+            margin-left: 4px;
+            font-weight: bold;
+            font-family: AllerBold;
+            background-color: #000;
+            color: #fff;
+          }
+          .here { color: yellow; }
+        }
+      }
+    }
+    
+    #navBarSub {
+      float: left;
+      clear: left;
+      margin-bottom: 8px;
+      ul {
+        float: left;
+        width: 100%;
+        margin-left: 14px;
+        li {
+          float: left;
+          a {
+            display: block;
+            width: auto;
+            padding: 2px 4px 3px 4px;
+            text-align: center;
+            margin-left: auto;
+            font-weight: bold;
+            font-family: AllerLightRegular;
+          }
+        }
+      }
+    }
+  }
+}

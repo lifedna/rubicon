@@ -1,0 +1,7 @@
+= simple_form_for @web_server, :defaults => {:label_html => { :class =>"span2" }, :input_html => { :class =>"span4" }  } do |f|
+  = explain_errors( @web_server )
+
+  = f.input :short_name
+  = f.input :description, :as => :text
+
+  = f.submit button_name, :class => "btn btn-large btn-primary"

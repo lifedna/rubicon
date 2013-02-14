@@ -1,0 +1,4 @@
+= render :partial => 'form', :locals => {:button_name => "Submit"}
+= content_for :nav_bar_sub do
+  %li.btn= link_to 'All Web Apps', web_servers_url
+  %li.btn= link_to 'Back', :back

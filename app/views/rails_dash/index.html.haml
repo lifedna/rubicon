@@ -1,0 +1,26 @@
+%h1 Ruby on Rails Applications
+
+- if @web_app_instances.blank?
+  %p None
+- else
+  - @web_app_instances.group_by(&:dns_name).map do |machine, machine_grps|
+    %div.container-fluid
+      %h3= machine
+      - machine_grps.group_by(&:environment).map do | env, wais|
+        %div.container-fluid
+          %h4= env
+          - wais.each do |wai|
+            %div.well.span5
+              %div.row-fluid
+                %div.span3
+                  %div.btn-toolbar
+                    = image_tag("#{wai.server}.png", :alt=>"#{wai.server} icon",:class=>'thumbnail')
+                  %div= services_icons( wai )
+                  %div.btn-group
+                    = link_to "<i class='icon-file'></i>".html_safe, wai, :alt => wai.name + " index" , :class => 'btn'
+                    = link_to "<i class='icon-pencil'></i>".html_safe, edit_web_app_instance_path(wai), :alt => "#{wai.name} edit" , :class => 'btn'
+                %div.span3
+                  %div
+                    %h4= wai.name
+                    %p= "#{wai.fqn}"
+                    %p= "#{wai.ip_address}:#{wai.downstream_port || '80'}"

@@ -1,0 +1,19 @@
+= simple_form_for @web_app_instance, :defaults => {:label_html => { :class =>"span3" }, :input_html => { :class =>"span4" }  } do |f|
+  = explain_errors( @web_app_instance )
+  %div.container-fluid
+    %div.row-fluid
+      %div.span1
+        = f.input :ssl, :label => false, :require => false do
+          = f.check_box :ssl
+          %i.icon-lock{:rel=>"tooltip", :title=>"ssl wrapped"}
+        = f.input :maint_page, :label => false, :require => false do
+          = f.check_box :maint_page
+          %i.icon-wrench{:rel=>"tooltip", :title=>"has a maint page"}
+      %div.span11
+        = f.input :name, :collection => @web_apps.map {|x| x.name }
+        = f.input :environment
+        = f.input :machine_desc, :label => "VM / Machine", :collection => @machines.map {|x| x.description}
+        = f.input :server, :label => "Rails Server", :collection => @web_servers.map {|x| x.short_name}
+        = f.input :downstream_port, :required => false
+
+        = f.submit button_name, :class => "btn btn-large btn-primary"

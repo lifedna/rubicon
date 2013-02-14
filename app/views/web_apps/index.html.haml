@@ -1,0 +1,31 @@
+- if @web_apps.blank?
+  %p None
+- else
+  %table.table.table-striped.table-condensed
+    %thead
+      %tr
+        %th
+        %th WebApp
+        %th Git Name
+        %th URL
+        %th Akas
+    %tbody
+      - @web_apps.each do |wa|
+        %tr
+          %td
+            = link_to "", web_app_path( wa ), :alt => 'view', :class => 'icon-file'
+            = link_to "", edit_web_app_path( wa ), :alt => 'edit', :class => 'icon-pencil'
+            = link_to "", wa, confirm: 'Are you sure?', method: :delete, :alt => 'delete', :class => 'icon-trash'
+          %td= link_to wa.name, web_app_path( wa )
+          %td
+            - if wa.git_name.present?
+              = link_to '', wa.gitlab_link, :class => 'icon-info-sign'
+            - elsif wa.git_name.present?
+              %i.icon-question-sign
+            = wa.git_name
+          %td= link_to wa.url, wa.url if wa.url.present?
+          %td= markdown wa.aka_csv
+
+
+= content_for :nav_bar_sub do
+  %li.btn= link_to 'New', new_web_app_url
